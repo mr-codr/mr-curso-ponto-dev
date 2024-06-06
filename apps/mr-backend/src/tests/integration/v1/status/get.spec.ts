@@ -5,7 +5,6 @@ test('GET to /v1/status should return 200', async () => {
   const { dependencies } = response.data;
 
   expect(response.status).toBe(200);
-
   // expect(isISODate(response.data.updated_at)).toBe(true);
   expect(dependencies.database.version).toBe('16.0');
   expect(dependencies.database.max_connections).toBe(100);
