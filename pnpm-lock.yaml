@@ -38,9 +38,6 @@ importers:
       axios:
         specifier: ^1.6.3
         version: 1.6.7
-      dotenv:
-        specifier: 16.4.4
-        version: 16.4.4
       fastify:
         specifier: ~4.13.0
         version: 4.13.0
@@ -3439,10 +3436,6 @@ packages:
 
   dotenv@16.3.2:
     resolution: {integrity: sha512-HTlk5nmhkm8F6JcdXvHIzaorzCoziNQT9mGxLPVXW8wJF1TiGSL60ZGB4gHWabHOaMmWmhvk2/lPHfnBiT78AQ==}
-    engines: {node: '>=12'}
-
-  dotenv@16.4.4:
-    resolution: {integrity: sha512-XvPXc8XAQThSjAbY6cQ/9PcBXmFoWuw1sQ3b8HqUCR6ziGXjkTi//kB9SWa2UwqlgdAIuRqAa/9hVljzPehbYg==}
     engines: {node: '>=12'}
 
   duplexer@0.1.2:
@@ -10811,8 +10804,6 @@ snapshots:
   dotenv-expand@10.0.0: {}
 
   dotenv@16.3.2: {}
-
-  dotenv@16.4.4: {}
 
   duplexer@0.1.2: {}
 

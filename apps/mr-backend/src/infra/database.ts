@@ -1,6 +1,6 @@
-import { Client } from 'pg';
+import { Client, QueryConfig } from 'pg';
 
-const query = async (query: string | QueryObject) => {
+const getNewClient = async () => {
   const client = new Client({
     host: process.env.POSTGRES_HOST,
     port: +process.env.POSTGRES_PORT,
@@ -8,9 +8,14 @@ const query = async (query: string | QueryObject) => {
     database: process.env.POSTGRES_DB,
     password: process.env.POSTGRES_PASSWORD,
   });
+  client.connect();
+  return client;
+};
 
+const query = async (query: string | QueryConfig) => {
+  let client: Client;
   try {
-    await client.connect();
+    client = await getNewClient();
     const result = await client.query(query);
     return result;
   } catch (error) {
@@ -22,10 +27,6 @@ const query = async (query: string | QueryObject) => {
 };
 
 export const database = {
-  query: query,
+  getNewClient,
+  query,
 };
-
-export interface QueryObject<T extends any[] = any[]> {
-  text: string;
-  values: T;
-}

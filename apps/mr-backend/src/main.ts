@@ -1,11 +1,6 @@
-import fastify from 'fastify';
-import statusRoutes from './api/v1/status';
-import migrationRoutes from './api/v1/migrations';
+import { buildServer } from './server';
 
-const server = fastify({ logger: true });
-
-server.register(statusRoutes);
-server.register(migrationRoutes);
+const server = buildServer({ logger: true });
 
 const host = process.env.HOST ?? 'localhost';
 const port = process.env.PORT ? Number(process.env.PORT) : 3000;
