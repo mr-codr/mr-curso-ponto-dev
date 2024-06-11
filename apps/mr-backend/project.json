@@ -14,7 +14,7 @@
         "outputPath": "dist/apps/mr-backend",
         "format": ["cjs"],
         "bundle": false,
-        "main": "apps/mr-backend/src/main.ts",
+        "main": "apps/mr-backend/src/index.ts",
         "tsConfig": "apps/mr-backend/tsconfig.app.json",
         "assets": ["apps/mr-backend/src/assets"],
         "generatePackageJson": true,
