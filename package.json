@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "build:api": "nx run mr-backend:build",
     "dev": "pnpm services:up && pnpm api",
     "api": "nx serve mr-backend",
     "services:up": "docker compose -f apps/mr-backend/src/infra/compose.yaml up -d",
