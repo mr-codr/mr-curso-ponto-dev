@@ -11,7 +11,7 @@
     "services:down": "docker compose -f apps/mr-backend/src/infra/compose.yaml down",
     "format:check": "nx format:check",
     "format": "nx format:write",
-    "test": "nx run mr-backend:test --runInBand --testPathPattern=integration",
+    "test": "pnpm services:up && pnpm wait-for-postgres && nx run mr-backend:test --runInBand --testPathPattern=integration",
     "test:watch": "nx run mr-backend:test --watch --runInBand",
     "migrations:create": "node-pg-migrate -m ./apps/mr-backend/src/infra/migrations create",
     "migrations:up": "node-pg-migrate -m ./apps/mr-backend/src/infra/migrations --envPath ./apps/mr-backend/.env.local up",

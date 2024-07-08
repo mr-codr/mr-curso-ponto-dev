@@ -13,6 +13,7 @@
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "allowJs": true,
     "baseUrl": ".",
     "paths": {
       "~/mr-backend/*": ["apps/mr-backend/src/*"]
